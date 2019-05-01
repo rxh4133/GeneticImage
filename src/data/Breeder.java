@@ -29,7 +29,7 @@ public class Breeder {
 			throw new RuntimeException("Images must be the same dimensions.");
 		}
 		if(m.size() != parentA.getWidth() * parentB.getHeight()) {
-			throw new RuntimeException("Mask length must match the number of pixels in the images.");
+			throw new RuntimeException("Mask length must match the number of pixels in the images.\nMask size: " + m.size() + "\nNum pixels: " + (parentA.getWidth() * parentB.getHeight()));
 		}
 		BufferedImage childA = new BufferedImage(parentA.getWidth(), parentA.getHeight(), BufferedImage.TYPE_INT_ARGB);
 		BufferedImage childB = new BufferedImage(parentA.getWidth(), parentA.getHeight(), BufferedImage.TYPE_INT_ARGB);

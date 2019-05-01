@@ -23,6 +23,7 @@ public class Display {
 	
 	public void displayImage(BufferedImage image) {
 		dispPanel.displayImage(image);
+		dispPanel.repaint();
 	}
 	
 	private class DisplayPanel extends JPanel{
@@ -40,7 +41,7 @@ public class Display {
 		@Override
 		public void paint(Graphics g) {
 			if(image != null) {
-				g.drawImage(image, 15, 40, null);
+				g.drawImage(image, 0, 0, null);
 			}
 		}
 	}
